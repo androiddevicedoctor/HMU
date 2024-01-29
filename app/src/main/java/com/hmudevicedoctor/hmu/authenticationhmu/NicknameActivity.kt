@@ -26,10 +26,12 @@ class NicknameActivity : AppCompatActivity() {
         continue_button=findViewById(R.id.continue_button)
         back_button=findViewById(R.id.back_button)
 
-        val nickName: String= nick_name.text.toString()
+
 
         continue_button.setOnClickListener {
-//            aa?
+            val nickName: String= nick_name.text.toString()
+            val nicknamestr="$nickName"+"/Stormy.Fog"
+
             continue_button.setBackgroundResource(R.drawable.shape_black_round_corner)
             continue_button.setTextColor(ContextCompat.getColor(this@NicknameActivity, R.color.white))
 
@@ -41,12 +43,13 @@ class NicknameActivity : AppCompatActivity() {
             userDocRef.get()
                 .addOnSuccessListener { documentSnapshot ->
                     if (documentSnapshot.exists()) {
+
                         val user = documentSnapshot.data
-                        user?.put("Nickname",nickName+"/Stormy.Fog")
+                        user?.put("Nickname",nicknamestr)
 
                         userDocRef.set(user!!)
                             .addOnSuccessListener {
-                                startActivity(Intent(this@NicknameActivity, NicknameActivity::class.java))
+                                startActivity(Intent(this@NicknameActivity, AvtarActivity::class.java))
                             }
                             .addOnFailureListener { e ->
                                 Toast.makeText(this@NicknameActivity, "Check your internet connection....", Toast.LENGTH_SHORT).show()
@@ -58,8 +61,6 @@ class NicknameActivity : AppCompatActivity() {
                 .addOnFailureListener { e ->
                     Toast.makeText(this@NicknameActivity, "Error fetching user data", Toast.LENGTH_SHORT).show()
                 }
-
-            startActivity(Intent(this@NicknameActivity, AvtarActivity::class.java))
         }
         back_button.setOnClickListener {
             startActivity(Intent(this@NicknameActivity, FlotsBoat::class.java))

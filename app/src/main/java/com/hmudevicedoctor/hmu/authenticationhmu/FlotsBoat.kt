@@ -48,7 +48,7 @@ class FlotsBoat : AppCompatActivity() {
         other.setOnClickListener {
             other.setBackgroundResource(R.drawable.shape_black_1234corrner_round)
             other.setTextColor(ContextCompat.getColor(this@FlotsBoat, R.color.white))
-            startActivity(Intent(this@FlotsBoat, BoatBoatOtherGenderActivity::class.java))
+            startActivity(Intent(this@FlotsBoat, BoatOtherGender::class.java))
         }
         back_button.setOnClickListener {
             startActivity(Intent(this@FlotsBoat, GenderActivity::class.java))

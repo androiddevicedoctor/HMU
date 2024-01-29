@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.hmudevicedoctor.hmu.R
 
-class BoatBoatOtherGenderActivity : AppCompatActivity() {
+class BoatOtherGender : AppCompatActivity() {
 
     private lateinit var Transgender: TextView
     private lateinit var Transsexual: TextView
@@ -20,6 +20,7 @@ class BoatBoatOtherGenderActivity : AppCompatActivity() {
     private lateinit var Gender_variant: TextView
     private lateinit var Crossdresser: TextView
     private lateinit var back_button: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_other_gender)
@@ -30,42 +31,42 @@ class BoatBoatOtherGenderActivity : AppCompatActivity() {
     private fun onclick() {
         Transgender.setOnClickListener {
             Transgender.setBackgroundResource(R.drawable.shape_black_1234corrner_round)
-            Transgender.setTextColor(ContextCompat.getColor(this@BoatBoatOtherGenderActivity, R.color.white))
+            Transgender.setTextColor(ContextCompat.getColor(this@BoatOtherGender, R.color.white))
             val str="Transgender"
             intent(str)
         }
         Transsexual.setOnClickListener {
             Transsexual.setBackgroundResource(R.drawable.shape_black_1234corrner_round)
-            Transsexual.setTextColor(ContextCompat.getColor(this@BoatBoatOtherGenderActivity, R.color.white))
+            Transsexual.setTextColor(ContextCompat.getColor(this@BoatOtherGender, R.color.white))
             val str="Transsexual"
             intent(str)
         }
         Gender_queer.setOnClickListener {
             Gender_queer.setBackgroundResource(R.drawable.shape_black_1234corrner_round)
-            Gender_queer.setTextColor(ContextCompat.getColor(this@BoatBoatOtherGenderActivity, R.color.white))
+            Gender_queer.setTextColor(ContextCompat.getColor(this@BoatOtherGender, R.color.white))
             val str="Gender queer"
             intent(str)
         }
         Gender_fluid.setOnClickListener {
             Gender_fluid.setBackgroundResource(R.drawable.shape_black_1234corrner_round)
-            Gender_fluid.setTextColor(ContextCompat.getColor(this@BoatBoatOtherGenderActivity, R.color.white))
+            Gender_fluid.setTextColor(ContextCompat.getColor(this@BoatOtherGender, R.color.white))
             val str="Gender fluid"
             intent(str)
         }
         Gender_variant.setOnClickListener {
             Gender_variant.setBackgroundResource(R.drawable.shape_black_1234corrner_round)
-            Gender_variant.setTextColor(ContextCompat.getColor(this@BoatBoatOtherGenderActivity, R.color.white))
+            Gender_variant.setTextColor(ContextCompat.getColor(this@BoatOtherGender, R.color.white))
             val str="Gender variant"
             intent(str)
         }
         Crossdresser.setOnClickListener {
             Crossdresser.setBackgroundResource(R.drawable.shape_black_1234corrner_round)
-            Crossdresser.setTextColor(ContextCompat.getColor(this@BoatBoatOtherGenderActivity, R.color.white))
+            Crossdresser.setTextColor(ContextCompat.getColor(this@BoatOtherGender, R.color.white))
             val str="Crossdresser"
             intent(str)
         }
         back_button.setOnClickListener {
-            startActivity(Intent(this@BoatBoatOtherGenderActivity, GenderActivity::class.java))
+            startActivity(Intent(this@BoatOtherGender, GenderActivity::class.java))
         }
     }
 
@@ -93,17 +94,17 @@ class BoatBoatOtherGenderActivity : AppCompatActivity() {
 
                     userDocRef.set(user!!)
                         .addOnSuccessListener {
-                            startActivity(Intent(this@BoatBoatOtherGenderActivity, NicknameActivity::class.java))
+                            startActivity(Intent(this@BoatOtherGender, NicknameActivity::class.java))
                         }
                         .addOnFailureListener { e ->
-                            Toast.makeText(this@BoatBoatOtherGenderActivity, "Check your internet connection....", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@BoatOtherGender, "Check your internet connection....", Toast.LENGTH_SHORT).show()
                         }
                 } else {
-                    Toast.makeText(this@BoatBoatOtherGenderActivity, "User does not exist", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@BoatOtherGender, "User does not exist", Toast.LENGTH_SHORT).show()
                 }
             }
             .addOnFailureListener { e ->
-                Toast.makeText(this@BoatBoatOtherGenderActivity, "Error fetching user data", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@BoatOtherGender, "Error fetching user data", Toast.LENGTH_SHORT).show()
             }
     }
 }

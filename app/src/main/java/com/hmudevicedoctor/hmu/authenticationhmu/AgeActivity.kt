@@ -56,7 +56,6 @@ class AgeActivity : AppCompatActivity() {
             continue_button.setBackgroundResource(R.drawable.shape_white_black_stork_round_corner)
             continue_button.setTextColor(ContextCompat.getColor(this@AgeActivity, R.color.black))
 
-
             val db = FirebaseFirestore.getInstance()
 
             val userDocRef = db.collection("users")

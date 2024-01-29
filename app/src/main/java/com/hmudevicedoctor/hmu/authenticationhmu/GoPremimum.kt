@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.hmudevicedoctor.hmu.R
+import com.hmudevicedoctor.hmu.bouttomnavbar.NavBar
 
 class GoPremimum : AppCompatActivity() {
     private lateinit var done:TextView
@@ -25,25 +26,25 @@ class GoPremimum : AppCompatActivity() {
     }
 
     private fun onClick() {
-        done.setOnClickListener {
-            startActivity(Intent(this@GoPremimum, GoPremimum::class.java))
-        }
-        month.setOnClickListener {
-            startActivity(Intent(this@GoPremimum, GoPremimum::class.java))
-        }
-        week.setOnClickListener {
-            startActivity(Intent(this@GoPremimum, GoPremimum::class.java))
-        }
-        restore_pur.setOnClickListener {
-            startActivity(Intent(this@GoPremimum, GoPremimum::class.java))
-        }
-        terms_condi.setOnClickListener {
-            startActivity(Intent(this@GoPremimum, GoPremimum::class.java))
-        }
+//        done.setOnClickListener {
+//            startActivity(Intent(this@GoPremimum, NavBar::class.java))
+//        }
+//        month.setOnClickListener {
+//            startActivity(Intent(this@GoPremimum, NavBar::class.java))
+//        }
+//        week.setOnClickListener {
+//            startActivity(Intent(this@GoPremimum, NavBar::class.java))
+//        }
+//        restore_pur.setOnClickListener {
+//            startActivity(Intent(this@GoPremimum, NavBar::class.java))
+//        }
+//        terms_condi.setOnClickListener {
+//            startActivity(Intent(this@GoPremimum, NavBar::class.java))
+//        }
         continue_button.setOnClickListener {
             continue_button.setBackgroundResource(R.drawable.shape_white_black_stork_round_corner)
             continue_button.setTextColor(ContextCompat.getColor(this@GoPremimum, R.color.black))
-            startActivity(Intent(this@GoPremimum, GoPremimum::class.java))
+            startActivity(Intent(this@GoPremimum, NavBar::class.java))
         }
 
     }
