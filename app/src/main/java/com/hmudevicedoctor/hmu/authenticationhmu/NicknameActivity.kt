@@ -29,6 +29,7 @@ class NicknameActivity : AppCompatActivity() {
         val nickName: String= nick_name.text.toString()
 
         continue_button.setOnClickListener {
+//            aa?
             continue_button.setBackgroundResource(R.drawable.shape_black_round_corner)
             continue_button.setTextColor(ContextCompat.getColor(this@NicknameActivity, R.color.white))
 
