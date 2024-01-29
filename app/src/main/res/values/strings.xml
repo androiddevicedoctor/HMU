@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HMU</string>
+    <string name="aa">The subscription will automatically renew unless turned off in your iTunes account settings. Please turn off at least 24 hours before the current period ends. Your iTunes Account will be charged when the purchase is confirmed. You can go to your iTunes Account to manage your subscription and turn off auto-renew</string>
+    <string name="hmu_teg_line"><![CDATA[HMU is the quickest way to say whatever you want, however you want, with new & close friends.]]></string>
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo_white"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_white"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HMU"
+        tools:targetApi="31">
+        <activity
+            android:name=".bouttomnavbar.NavBar"
+            android:exported="false" />
+        <activity
+            android:name=".authenticationhmu.AvtarActivity"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".authenticationhmu.GoPremimum"
+            android:exported="false"
+            android:theme="@style/timeBar2" />
+        <activity
+            android:name=".authenticationhmu.NicknameActivity"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".authenticationhmu.FlotsBoat"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".authenticationhmu.OtherGenderActivity"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".authenticationhmu.GenderActivity"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".authenticationhmu.AgeActivity"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".authenticationhmu.EnterOtpActivity"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".authenticationhmu.EnterNumberActivity"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".authenticationhmu.GetStarted"
+            android:exported="false"
+            android:theme="@style/timeBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

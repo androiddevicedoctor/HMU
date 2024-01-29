@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590952170415",
+    "project_id": "hmu-app-66725",
+    "storage_bucket": "hmu-app-66725.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590952170415:android:d45486f987301f29c6655a",
+        "android_client_info": {
+          "package_name": "com.hmudevicedoctor.hmu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClvawBlpie_8jdbyq35qExMqN8NIy7tuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
